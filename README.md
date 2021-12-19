@@ -35,15 +35,18 @@
 %dataset% - файл в формате `json` в папке `dataset`
 ```JSON
 [
-  {"name":"phone","size":1,"value":"2000"},
-  {"name":"book","size":1,"value":"500"},
-  {"name":"notebook","size":3,"value":"3500"}
+  {"name":"phone","size":1,"value":"2000","processed":false},
+  {"name":"book","size":1,"value":"500","processed":false},
+  {"name":"notebook","size":3,"value":"3500","processed":false}
 ]
 ```
+`processed` - указывает на признак обработки, для исключения повторного использования в вычислениях
+
 %container_size% - ограничение контейнера  
-%min_product_size% - минимальный размер продукта
+%min_container_size% - минимальный размер контейнера, он-же шаг.
+Иногда целесообразно указывать равным минимальному размеру продукта
 
 Запустить выполнение алгоритма командой:  
 ```bash
-php run.php %dataset% %container_size% %min_product_size%
+php run.php %dataset% %container_size% %min_container_size%
 ```

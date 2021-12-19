@@ -21,7 +21,7 @@ use App\DynamicProgramming;
 $option = [
     'dataset' => $argv[1] ?? die("Передайте вторым параметром датасет из папки 'dataset' в формате '%name%.json'" . PHP_EOL),
     'full_size' => $argv[2] ?? die("Передайте третьим параметром размер контейнера, например 100" . PHP_EOL),
-    'min_object_size' => $argv[3] ?? die("Передайте четвёртым параметром минимальный размер объекта, например 1" . PHP_EOL),
+    'min_object_size' => $argv[3] ?? die("Передайте четвёртым параметром минимальный размер контейнера, например 1" . PHP_EOL),
 ];
 
 $datasetFile = @file_get_contents(__DIR__ . "/dataset/". $option['dataset']);
